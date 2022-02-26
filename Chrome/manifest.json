@@ -1,0 +1,38 @@
+{
+    "name": "Kindle Highlights & Notes Fetcher",
+    "description": "This extension will fetch all highlights and notes of specific book from https://read.amazon.com webpage.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "permissions": [
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://read.amazon.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://read.amazon.com/*",
+                "https://*/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Kindle Highlights & Notes Fetcher",
+        "default_icon": {
+            "32": "/icons/logo32.png",
+            "48": "/icons/logo48.png",
+            "128": "/icons/logo128.png"
+        }
+    },
+    "icons": {
+        "32": "/icons/logo32.png",
+        "48": "/icons/logo48.png",
+        "128": "/icons/logo128.png"
+    }
+}
