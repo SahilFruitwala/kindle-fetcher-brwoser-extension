@@ -46,18 +46,17 @@
       all_data["highlights"].push(data);
     }
 
-    return md_data;
+    return { name: book_name.substring(0, 25), data: md_data };
   };
 
   const downloadData = () => {
-    const data = fetcher();
+    const { data, name } = { ...fetcher() };
     const element = document.createElement("a");
     element.setAttribute(
       "href",
-      "data:text/plain;charset=utf-8," +
-        encodeURIComponent(data)
+      "data:text/plain;charset=utf-8," + encodeURIComponent(data)
     );
-    element.setAttribute("download", `highlights.md`);
+    element.setAttribute("download", `${name}.md`);
     // element.setAttribute(
     //   "href",
     //   "data:text/plain;charset=utf-8," +
