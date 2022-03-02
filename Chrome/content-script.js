@@ -14,7 +14,7 @@ const fetcher = () => {
     "a-spacing-none a-spacing-top-micro a-size-base a-color-secondary kp-notebook-selectable kp-notebook-metadata"
   )[0].textContent;
   all_data["author"] = author_name;
-  md_data += "# Author: " + author_name + "\n";
+  md_data += "## Author: " + author_name + "\n\n";
 
   //! get highlights from main highlight section
   fetched_highlights = document.getElementsByClassName(
@@ -48,7 +48,7 @@ const downloadData = () => {
   const element = document.createElement("a");
   element.setAttribute(
     "href",
-    "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify(data))
+    "data:text/plain;charset=utf-8," + encodeURIComponent(data)
   );
   element.setAttribute("download", `${name}.md`);
 

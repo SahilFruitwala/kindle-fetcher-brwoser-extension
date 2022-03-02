@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Kindle Highlights & Notes Fetcher",
     "description": "This extension will fetch all highlights and notes of specific book from https://read.amazon.com webpage.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "content_scripts": [
         {
             "matches": [
