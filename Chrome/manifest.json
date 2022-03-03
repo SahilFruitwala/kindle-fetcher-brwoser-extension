@@ -1,12 +1,8 @@
 {
-    "name": "Kindle Highlights & Notes Fetcher",
-    "description": "This extension will fetch all highlights and notes of specific book from https://read.amazon.com webpage.",
+    "name": "Kindle Highlight & Note Fetcher",
+    "description": "This extension will fetch all highlights and notes of specific book from Notes & Highlights section of online Kindle reader.",
     "version": "1.0.1",
     "manifest_version": 3,
-    "permissions": [
-        "scripting",
-        "tabs"
-    ],
     "host_permissions": [
         "https://read.amazon.com/*"
     ],
